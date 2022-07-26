@@ -162,7 +162,7 @@ class Main:
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
 				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(B))
-				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[\033[1;95m\n"%(D))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 3 SECONDS\x1b[0m\n"%(D))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
