@@ -139,8 +139,7 @@ class Main:
 			else: 
 				notice()
 				exit() 
-
-                elif hoga in ["2", "02"]:
+		elif hoga in ["2", "02"]:
 			if basesplit in plr:
 				self.old5_8()
 			else: 
