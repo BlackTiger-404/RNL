@@ -137,8 +137,8 @@ class Main:
 		x = 111111111
 		xx = 999999999
 		idx = "100000"
-		limit = int(input("\033[0;97m [+] ENTER LIMIT \033[0;92m(50,0000 MAX): \033[0;96m"))
-		if (limit)>500000:
+		limit = int(input("\033[0;97m [+] ENTER LIMIT \033[0;92m(30,000 MAX): \033[0;96m"))
+		if (limit)>30000:
 			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(D))
 		try:
 			for n in range(limit):
