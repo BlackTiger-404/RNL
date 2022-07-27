@@ -177,8 +177,8 @@ class Main:
 
 
 	def old5_8(self):
-		x = 111111111
-		xx = 999999999
+		x = 111111
+		xx = 999999
 		idx = "100000"
 		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;95m(70,000 MAX): \033[0;92m"))
 		if (limit)>70000:
