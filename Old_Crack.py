@@ -176,7 +176,7 @@ class Main:
 		except Exception as e:exit(str(e))
 
 
-	def old5–8(self):
+	def old5_8(self):
 		x = 111111111
 		xx = 999999999
 		idx = "100000"
@@ -202,7 +202,7 @@ class Main:
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
-		except Exception as e:exit(str(e))
+		except Exception as e:exit(str(e)
 
 		
 		
