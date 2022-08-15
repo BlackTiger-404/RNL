@@ -27,7 +27,8 @@ pip install rich
 
 pkg install git 
 
-rm -rf RNL git clone https://github.com/BlackTiger-404/RNL.git
+rm -rf RNL 
+git clone https://github.com/BlackTiger-404/RNL.git
 
 cd RNL
 
