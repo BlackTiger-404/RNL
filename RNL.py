@@ -1,5 +1,5 @@
 import os, sys
 try:
-    __import__("oldnin").__niki____()
+    __import__("Oldn").Main()
 except Exception as e:
     exit(str(e))
